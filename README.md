@@ -14,7 +14,7 @@ The following picture shows the environment:
 
 For developing any kind of code, it is useful to start with Pseudocode or Flowchart. These tools enable to design information and action related to each process that need to be executed in order to achieve the goal. For this type of work, it was choosen the flowchart rapresentation for showing each process:
 
-<img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/a435a136-a21e-4854-b183-2dc254dc1ff5" width="600" height="600">
+<img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/a435a136-a21e-4854-b183-2dc254dc1ff5" width="800" height="800">
 
 ## How to run
 -----------------------------
