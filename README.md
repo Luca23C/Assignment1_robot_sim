@@ -1,39 +1,38 @@
-Assignment 1 - Robotic Simulator
-================================
+# Assignment 1 - Robotic Simulator
 
 The aim of this assignment was to develop a Python code to control a robot within an arena, with the goal of putting all the boxes together. The area where they should be grouped could be arbitrary.
 
 The following picture shows the environment:
 
-
 <img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936" width="400" height="400">
 
 
-Flowchart
+## Flowchart
 -----------------------------
 
 For developing any kind of code, it is useful to start with Pseudocode or Flowchart. These tools enable to design information and action related to each process that need to be executed in order to achieve the goal. For this type of work, it was choosen the flowchart rapresentation for showing each process:
 
 <img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/a435a136-a21e-4854-b183-2dc254dc1ff5" width="800" height="800">
 
+
 ## How to run
 -----------------------------
-
-To run one or more scripts in the simulator, use `run.py`, passing it the file names. 
-
-I am proposing you three exercises, with an increasing level of difficulty.
-The instruction for the three exercises can be found inside the .py files (exercise1.py, exercise2.py, exercise3.py).
-
-When done, you can run the program with:
+First of all it is necessary to clone this repository inside your workspace, into your local machine, by using the following command:
 
 ```bash
-$ python run.py exercise1.py
+$ git clone https://github.com/Luca23C/Assignment1_robot_sim.git
 ```
 
-You have also the solutions of the exercises (folder solutions)
+Now navigate trought the folders by using:
 
 ```bash
-$ python run.py solutions/exercise1_solution.py
+$ cd <your_workspace>/python_simulator/robot-sim
+```
+
+Finally it is possible to run this project by typing this line:
+
+```bash
+$ python3 run.py assignment.py
 ```
 
 
