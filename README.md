@@ -6,7 +6,7 @@ The aim of this assignment was to develop a Python code to control a robot withi
 The following picture shows the environment:
 
 
-![Arena](https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936)
+![Arena](https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936) with <img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936" width="200" height="200">
 
 ## Flowchart
 -----------------------------
