@@ -1,15 +1,19 @@
-Python Robotics Simulator
+Assignment 1 - Robotic Simulator
 ================================
 
-This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
-Some of the arenas and the exercises have been modified for the Research Track I course
+The aim of this assignment was to develop a Python code to control a robot within an arena, with the goal of putting all the boxes together. The area where they should be grouped could be arbitrary.
 
-Installing and running
-----------------------
+The following picture shows the environment:
 
-Please follow the instructions provided in the slides. 
 
-## Exercise
+![Arena](https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936)
+
+## Flowchart
+-----------------------------
+
+Frase relativa al flowcart e immagine
+
+## How to run
 -----------------------------
 
 To run one or more scripts in the simulator, use `run.py`, passing it the file names. 
@@ -28,6 +32,7 @@ You have also the solutions of the exercises (folder solutions)
 ```bash
 $ python run.py solutions/exercise1_solution.py
 ```
+
 
 Robot API
 ---------
