@@ -35,36 +35,29 @@ Finally it is possible to run this project by typing this line:
 $ python3 run.py assignment.py
 ```
 
+## Functions developed
 
-Robot API
----------
+In this section, it will be explained all functions developed for this project.
 
-The API for controlling a simulated robot is designed to be as similar as possible to the [SR API][sr-api].
+### Motors
 
-### Motors ###
+The simulated robot has two motors configured for skid steering, connected to a two-output. The left motor is connected to output `0` and the right motor to output `1`.
 
-The simulated robot has two motors configured for skid steering, connected to a two-output [Motor Board](https://studentrobotics.org/docs/kit/motor_board). The left motor is connected to output `0` and the right motor to output `1`.
+In this case, it was developed two different functions called: `drive()` and `turn()`. Each function requires as input the speed and the duration (expressed in seconds) that it provides to the robot.
+The `drive()` function enables steering the robot either forward or backward and the `turn()` function allows to turning the robot.
+For these funcitons , i
 
-The Motor Board API is identical to [that of the SR API](https://studentrobotics.org/docs/programming/sr/motors/), except that motor boards cannot be addressed by serial number. So, to turn on the spot at one quarter of full power, one might write the following:
-
-```python
-R.motors[0].m0.power = 25
-R.motors[0].m1.power = -25
-```
-
-### The Grabber ###
-
-The robot is equipped with a grabber, capable of picking up a token which is in front of the robot and within 0.4 metres of the robot's centre. To pick up a token, call the `R.grab` method:
+Here it was reported the `drive()` function:
 
 ```python
-success = R.grab()
+def drive(speed, seconds):
+    R.motors[0].m0.power = speed
+    R.motors[0].m1.power = speed
+    time.sleep(seconds)
+    R.motors[0].m0.power = 0
+    R.motors[0].m1.power = 0
 ```
-
-The `R.grab` function returns `True` if a token was successfully picked up, or `False` otherwise. If the robot is already holding a token, it will throw an `AlreadyHoldingSomethingException`.
-
-To drop the token, call the `R.release` method.
-
-Cable-tie flails are not implemented.
+In case of `turn()` function, there is a specific difference: one of motor needs a minus in front of its speed.
 
 ### Vision ###
 
@@ -99,3 +92,18 @@ for m in markers:
 ```
 
 [sr-api]: https://studentrobotics.org/docs/programming/sr/
+
+
+### The Grabber ###
+
+The robot is equipped with a grabber, capable of picking up a token which is in front of the robot and within 0.4 metres of the robot's centre. To pick up a token, call the `R.grab` method:
+
+```python
+success = R.grab()
+```
+
+The `R.grab` function returns `True` if a token was successfully picked up, or `False` otherwise. If the robot is already holding a token, it will throw an `AlreadyHoldingSomethingException`.
+
+To drop the token, call the `R.release` method.
+
+Cable-tie flails are not implemented.
