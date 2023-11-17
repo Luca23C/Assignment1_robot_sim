@@ -59,7 +59,7 @@ def drive(speed, seconds):
 ```
 In case of `turn()` function, there is a specific difference: one of motor needs a minus in front of its speed.
 
-### Vision ###
+### Vision
 
 To help the robot find tokens and navigate, each token has markers stuck to it, as does each wall. The `R.see` method returns a list of all the markers the robot can see, as `Marker` objects. The robot can only see markers which it is facing towards.
 
@@ -78,20 +78,7 @@ Each `Marker` object has the following attributes:
 * `rot_y`: an alias for `centre.rot_y`
 * `timestamp`: the time at which the marker was seen (when `R.see` was called).
 
-For example, the following code lists all of the markers the robot can see:
-
-```python
-markers = R.see()
-print "I can see", len(markers), "markers:"
-
-for m in markers:
-    if m.info.marker_type in (MARKER_TOKEN_GOLD, MARKER_TOKEN_SILVER):
-        print " - Token {0} is {1} metres away".format( m.info.offset, m.dist )
-    elif m.info.marker_type == MARKER_ARENA:
-        print " - Arena marker {0} is {1} metres away".format( m.info.offset, m.dist )
-```
-
-[sr-api]: https://studentrobotics.org/docs/programming/sr/
+For this project it was considered only three attributes: `code`, `dist` and `rot_y`.
 
 
 ### The Grabber ###
