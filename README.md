@@ -1,4 +1,4 @@
-# Assignment 1 - Robotic Simulator
+# Assignment 1 - Robot Simulator
 
 The aim of this assignment was to develop a Python code to control a robot within an arena, with the goal of putting all the boxes together. The area where they should be grouped could be arbitrary and for this project it was called 'load zone'.
 
