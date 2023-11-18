@@ -128,6 +128,7 @@ success = R.release()
 
 ## How to run
 
+IMPORTANT: This project was developed with python3.8 version.
 First of all it is necessary to clone this repository inside your workspace, into your local machine, by using the following command:
 
 ```bash
@@ -143,5 +144,5 @@ $ cd <your_workspace>/python_simulator/robot-sim
 Finally it is possible to run this project by typing this line:
 
 ```bash
-$ python3 run.py assignment.py
+$ python3.8 run.py assignment.py
 ```
