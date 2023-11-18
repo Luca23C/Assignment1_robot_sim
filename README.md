@@ -4,7 +4,8 @@ The following picture shows the environment of this assignment:
 
 <img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936" width="400" height="400">
 
-The aim of this assignment was to create a Python node to control a robot inside the arena, aiming to gather all the boxes together. The area where the boxes should be grouped could be arbitrary and for this project it was called 'load zone'.
+
+The aim of this assignment was to create a Python node to control a robot inside the arena, aiming to gather all the boxes in a specific area. The area where the boxes should be grouped could be arbitrary and for this project it was called 'load zone'.
 
 
 ## Flowchart
