@@ -2,7 +2,7 @@
 
 The following picture shows the environment of this assignment:
 
-<img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/3dc09cd4-5d77-479d-8372-d27511e34936" width="400" height="400">
+<img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/87b83d64-7036-4788-b4a1-5b811bec0b0f" width="400" height="400">
 
 
 The aim of this assignment was to create a Python node to control a robot inside the arena, aiming to gather all the boxes in a specific area. The area where the boxes should be grouped could be arbitrary and for this project it was called 'load zone'.
@@ -14,7 +14,7 @@ For developing any kind of code, it is useful to start with Pseudocode or Flowch
 
 For this type of work, it was choosen the flowchart rapresentation for showing each process:
 
-<img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/f594a219-9635-4cbb-b98b-b4134f8fa58e" width="800" height="800">
+<img src="https://github.com/Luca23C/Assignment1_robot_sim/assets/97911589/550a2f5d-e50d-4776-91fa-47514d43fb63" width="800" height="800">
 
 
 ## Functions developed
