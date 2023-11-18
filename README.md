@@ -129,6 +129,7 @@ success = R.release()
 ## How to run
 
 IMPORTANT: This project was developed with python3.8 version.
+
 First of all it is necessary to clone this repository inside your workspace, into your local machine, by using the following command:
 
 ```bash
