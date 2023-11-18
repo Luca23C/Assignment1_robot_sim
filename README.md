@@ -95,7 +95,7 @@ def find_token():
     return mat
 ```
 
-It was developed another function that work with `find_token()` and its name is: `checkToken()`.
+It was developed another function which works with `find_token()` and its name is: `checkToken()`.
 The `checkToken()` function needs as input the `code` and a list called 'tokenReleased' that contain all token released in the load zone. The `code` was given by the `find_token()` function.
 This developed function checks if the detected token has already been released in the load zone and it returns a boolean value, where `True` means that the token is already in the load zone, while `False` indicates the opposite.
 
