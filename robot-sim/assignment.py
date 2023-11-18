@@ -8,11 +8,11 @@ R = Robot()
 start = True
 generate_IdMarker_list = True
 pickPlace = True
-Markers_id = []     # token id list 
+Markers_id = []     # token code list 
 
 dist_th = 0.40      # threshold of distance for grabbing
 dist_rel_th = 0.70  # threshold of distance for releasing
-angle_th = 0.7     # threshold of angle
+angle_th = 0.7     # threshold of orientation
 
 
 # Function for driving robot
@@ -31,7 +31,7 @@ def turn(speed, seconds):
     R.motors[0].m0.power = 0
     R.motors[0].m1.power = 0
 
-# Function return the token id seen into the environment
+# Function return the token code detected into the environment
 def create_token_list():
     global id_token
 
@@ -40,7 +40,7 @@ def create_token_list():
 
     return id_token
 
-# Function for finding token 
+# Function for finding information of token 
 def find_token():
     mat = []
     for token in R.see():
@@ -68,19 +68,19 @@ def checkToken(id, tokenReleased):
 # MAIN
 while start:
 
-    # Scan tokens and create the list
+    # Scan tokens into the environment and create the list
     while generate_IdMarker_list:
 
         isEqual = True
         turn(20, 0.1)
         id_token = create_token_list()
         
-        # Case for the first seen token id
+        # Case of the first token detected
         if len(Markers_id) == 0:
             Markers_id.append(id_token)
             first_token = id_token
 
-        # Check if the token id was already seen and break while loop
+        # Check if the token code was already detected and break while loop
         for i in range(len(Markers_id)):
             if Markers_id[i] == id_token:
                 isEqual = False
@@ -90,37 +90,37 @@ while start:
 
         if isEqual == True:
             Markers_id.append(id_token)
-        #print(str(Markers_id))
 
     
-    # Define the load zone (id = 38) and an empty list for saving the released token
-    element_num = len(Markers_id)
-    base = min(Markers_id)          # Load zone
-    tokenReleased = []
+    # Define the load zone (code = 38) and an empty list for saving the released token
+    element_num = len(Markers_id)   # Get number of elements in the Markers_id list
+    base = min(Markers_id)          # Declare the load zone
+    tokenReleased = []              # List for token released
     tokenReleased.append(base)
+
 
     # Pick and place token
     while pickPlace:
         
-        # if the length of token released list is equal to marker id list (without load zone) break while loop
+        # if the length of tokenReleased list is equal to Marker_id list break while loop
         if len(tokenReleased) == element_num:
             print('All tokens are located in the load zone')
             start = False
             break
 
-        # Get list with info of token seen
+        # Get list with info of token detected
         arrInfo = find_token()
         
         if len(arrInfo) != 0:
             for i in range(int(len(arrInfo)/3)):
 
-                # Cicle the all token id in the list
+                # Cicle the all token code in the list
                 id_token = arrInfo[i+(2*i)]
 
                 # Check if this token is already released
                 check = checkToken(id_token, tokenReleased)
 
-                # If the token id is not into released list, it's possible to define the variable for this specific token seen
+                # If the token code is not into released list, it's possible to define the variable for this specific token detected
                 if check == False:
                     id_token = arrInfo[i+(2*i)]
                     dist = arrInfo[i+(2*i)+1]
@@ -162,7 +162,7 @@ while start:
                         dist_w = 0
                         rot_y_w = 0
 
-                        # Check the id = 38, means check if the load zone is visible
+                        # Check the code = 38, means check if the load zone is visible
                         for i in range(len(arrInfo_w)):
                             if arrInfo_w[i] == base:
                                 id_token_w = arrInfo_w[i]
